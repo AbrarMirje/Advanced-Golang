@@ -8,8 +8,11 @@ func main() {
 
 	//fmt.Println("sum of 0:", sumOfDigits(0))
 	//fmt.Println("sum of 1:", sumOfDigits(1))
-	fmt.Println("Sum of digits:", sumOfDigits(15))
+	// fmt.Println("Sum of digits:", sumOfDigits(15))
 	//fmt.Println("sum of 10:", sumOfDigits(10))
+
+	result := fibonacciSeries(10)
+	fmt.Print(result, " ")
 }
 
 func factorial(n int) int {
@@ -38,4 +41,16 @@ func sumOfDigits(n int) int {
 			15 % 10 = 5 + 1 == 6
 			return 6 to caller in main()
 	*/
+}
+
+func fibonacciSeries(n int) int {
+	// Base case
+	if n == 0 {
+		return 0
+	}
+	if n == 1 {
+		return 1
+	}
+	// Recursive case:
+	return fibonacciSeries(n-1) + fibonacciSeries(n-2)
 }
