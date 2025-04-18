@@ -32,3 +32,6 @@ func main() {
 	result = builder.String()
 	fmt.Println(result)
 }
+
+// Proper way to prevent from panic
+//https://go.dev/play/p/Ht8o91tgIOR
